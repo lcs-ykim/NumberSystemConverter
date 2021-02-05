@@ -17,6 +17,20 @@ print("H: Hexadecimal")
 print("Enter your choice (B/O/D/H):", terminator: "") //Keep following output on the same line
 var fromNS = readLine()!
 
+//Switch fromNS into number forms
+switch fromNS {
+case "B":
+     fromNS = "2"
+case "O":
+     fromNS = "8"
+case "D":
+     fromNS = "10"
+case "H":
+     fromNS = "16"
+default:
+    break
+}
+
 //Get the "from" number
 print("What number do you want to convert from?")
 print("Enter your choice:", terminator: "")
@@ -28,8 +42,22 @@ print("B: Binary")
 print("O: Octal")
 print("D: Decimal")
 print("H: Hexadecimal")
-print("Enter your choice (B/O/D/H):", terminator: "") //Keep following output on the same line
+print("Enter your choice (B/O/D/H):", terminator: "")
 var toNS = readLine()!
+
+//Switch toNS into number forms
+switch toNS {
+case "B":
+     toNS = "2"
+case "O":
+     toNS = "8"
+case "D":
+     toNS = "10"
+case "H":
+     toNS = "16"
+default:
+    break
+}
 
 //PROCESS
 //Binary, Octal, or Hexadecimal to Decimal
@@ -80,33 +108,6 @@ func getRepresentation(of valueToConvert: Int, inBase base: String) -> String {
     
     return representation
     
-}
-
-//Rewrite inputs into number forms
-switch fromNS {
-case "B":
-     fromNS = "2"
-case "O":
-     fromNS = "8"
-case "D":
-     fromNS = "10"
-case "H":
-     fromNS = "16"
-default:
-    break
-}
-
-switch toNS {
-case "B":
-     toNS = "2"
-case "O":
-     toNS = "8"
-case "D":
-     toNS = "10"
-case "H":
-     toNS = "16"
-default:
-    break
 }
 
 // OUTPUT
